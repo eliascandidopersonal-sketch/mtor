@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Elias Candido — Tratamento de Lesão com Musculação</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-deep: #020D1F;
+    --blue-mid: #0A2347;
+    --blue-bright: #1565C0;
+    --blue-electric: #2979FF;
+    --blue-light: #4DA3FF;
+    --white: #FFFFFF;
+    --gray-muted: #8A9BB5;
+    --text-body: #C5D3E8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+
+  body {
+    background: var(--blue-deep);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: rgba(2,13,31,.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(77,163,255,.12);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    min-width: 0;
+  }
+
+  .nav-logo img {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--blue-electric);
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .nav-logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--white);
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-logo-text span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--blue-light);
+    text-transform: uppercase;
+  }
+
+  .nav-cta {
+    background: var(--blue-electric);
+    color: var(--white);
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background .2s;
+  }
+
+  .nav-cta:hover { background: var(--blue-bright); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 80px 20px 60px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 100% 60% at 50% 30%, rgba(21,101,192,.35) 0%, transparent 65%),
+      linear-gradient(180deg, #020D1F 0%, #0A2347 60%, #020D1F 100%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(41,121,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(41,121,255,.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(41,121,255,0.2);
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(41,121,255,.15);
+    border: 1px solid rgba(41,121,255,.3);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue-light);
+    margin-bottom: 20px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--blue-electric);
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .4; transform: scale(.6); }
+  }
+
+  h1.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: .95;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  h1.hero-title em {
+    font-style: normal;
+    color: var(--blue-electric);
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .hero-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 7px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #dce7f5;
+  }
+
+  .hero-tag .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    flex-shrink: 0;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--blue-electric);
+    color: var(--white);
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 360px;
+    transition: background .2s, transform .2s, box-shadow .2s;
+  }
+
+  .btn-primary:active { transform: scale(.97); }
+  .btn-primary:hover { background: var(--blue-bright); box-shadow: 0 12px 30px rgba(41,121,255,.4); }
+
+  .btn-primary svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  /* ── UTILS ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(41,121,255,.25), transparent);
+    margin: 0 20px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--blue-electric);
+    margin-bottom: 12px;
+  }
+
+  h2.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 9vw, 56px);
+    line-height: .95;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  /* ── SECTIONS ── */
+  .sec {
+    padding: 64px 20px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .sec-full {
+    padding: 64px 0;
+  }
+
+  .sec-full .sec-inner {
+    padding: 0 20px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ── PAIN ── */
+  .pain-box {
+    background: rgba(10,35,71,.5);
+    border: 1px solid rgba(41,121,255,.12);
+    border-radius: 20px;
+    padding: 28px 20px;
+    margin-top: 32px;
+  }
+
+  .pain-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pain-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background: rgba(41,121,255,.06);
+    border: 1px solid rgba(41,121,255,.1);
+    border-left: 3px solid rgba(41,121,255,.55);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: border-color .2s, background .2s;
+  }
+
+  .pain-item:hover { border-color: rgba(41,121,255,.3); border-left-color: var(--blue-light); background: rgba(41,121,255,.09); }
+
+  .pain-head {
+    font-size: 15px;
+    color: var(--white);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .pain-desc {
+    font-size: 13px;
+    color: var(--text-body);
+    line-height: 1.55;
+  }
+
+  /* ── STORY TIMELINE ── */
+  .story-bg {
+    background: linear-gradient(180deg, rgba(10,35,71,.4), transparent);
+  }
+
+  .timeline {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 28px;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity .5s, transform .5s;
+  }
+
+  .tl-item.visible { opacity: 1; transform: translateX(0); }
+  .tl-item:last-child { padding-bottom: 0; }
+
+  .tl-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 16px;
+  }
+
+  .tl-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--blue-electric);
+    border: 3px solid var(--blue-deep);
+    box-shadow: 0 0 0 3px rgba(41,121,255,.25);
+    flex-shrink: 0;
+  }
+
+  .tl-conn {
+    flex: 1;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(41,121,255,.35), rgba(41,121,255,.05));
+    margin-top: 4px;
+  }
+
+  .tl-item:last-child .tl-conn { display: none; }
+
+  .tl-year {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue-electric);
+    margin-bottom: 4px;
+  }
+
+  .tl-text {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.6;
+  }
+
+  .story-highlight {
+    background: rgba(41,121,255,.1);
+    border-left: 3px solid var(--blue-electric);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.6;
+    margin-top: 28px;
+  }
+
+  /* ── METHOD ── */
+  .method-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }
+
+  .method-step {
+    background: rgba(10,35,71,.6);
+    border: 1px solid rgba(41,121,255,.15);
+    border-radius: 16px;
+    padding: 22px 18px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+  }
+
+  .method-step::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue-electric), var(--blue-light));
+    opacity: 0;
+    transition: opacity .25s;
+  }
+
+  .method-step:hover { transform: translateY(-4px); border-color: rgba(41,121,255,.35); }
+  .method-step:hover::before { opacity: 1; }
+
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    color: rgba(41,121,255,.16);
+    position: absolute;
+    top: 8px; right: 14px;
+    z-index: 1;
+  }
+
+  .step-accent {
+    width: 34px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--blue-electric), var(--blue-light));
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .step-desc {
+    font-size: 12px;
+    color: var(--text-body);
+    line-height: 1.5;
+  }
+
+  /* ── RESULTS ── */
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .result-card {
+    background: linear-gradient(135deg, rgba(41,121,255,.12), rgba(41,121,255,.04));
+    border: 1px solid rgba(41,121,255,.18);
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: left;
+    transition: transform .2s, border-color .2s;
+  }
+
+  .result-card:hover { transform: translateY(-3px); border-color: rgba(41,121,255,.4); }
+
+  .result-accent {
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--blue-electric), var(--blue-light));
+    margin-bottom: 14px;
+  }
+
+  .result-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .result-desc {
+    font-size: 12.5px;
+    color: var(--text-body);
+    line-height: 1.55;
+  }
+
+  /* ── CREDENTIALS ── */
+  .creds-bg {
+    background: linear-gradient(180deg, rgba(10,35,71,.4), transparent);
+  }
+
+  .creds-list {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cred-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(41,121,255,.06);
+    border: 1px solid rgba(41,121,255,.1);
+    border-radius: 10px;
+    transition: all .2s;
+  }
+
+  .cred-item:hover {
+    background: rgba(41,121,255,.12);
+    border-color: rgba(41,121,255,.28);
+    transform: translateX(4px);
+  }
+
+  .cred-check {
+    width: 26px; height: 26px;
+    border-radius: 7px;
+    background: var(--blue-electric);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .cred-item span {
+    font-size: 13px;
+    color: var(--text-body);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background:
+      radial-gradient(ellipse 100% 70% at 50% 50%, rgba(21,101,192,.38) 0%, transparent 65%),
+      linear-gradient(180deg, #020D1F, #0A2347, #020D1F);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(41,121,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(41,121,255,.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(44px, 12vw, 72px);
+    line-height: .95;
+    margin-bottom: 20px;
+  }
+
+  .cta-section h2 em {
+    font-style: normal;
+    color: var(--blue-electric);
+    display: block;
+  }
+
+  .cta-section p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-body);
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .cta-note {
+    font-size: 12px;
+    color: var(--gray-muted);
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #010912;
+    border-top: 1px solid rgba(41,121,255,.1);
+    padding: 36px 20px 28px;
+  }
+
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .footer-brand span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--gray-muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .footer-contact {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-contact p { font-size: 13px; color: var(--gray-muted); }
+
+  .footer-contact a {
+    font-size: 13px;
+    color: var(--blue-light);
+    text-decoration: none;
+  }
+
+  .footer-copy {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(138,155,181,.4);
+    border-top: 1px solid rgba(255,255,255,.05);
+    padding-top: 20px;
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .55s ease, transform .55s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wpp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 200;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 24px rgba(37,211,102,.45);
+    text-decoration: none;
+    animation: float-wpp 3s ease-in-out infinite;
+  }
+
+  @keyframes float-wpp {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .wpp-float:hover { animation: none; transform: scale(1.08); }
+  .wpp-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* ── DESKTOP OVERRIDES ── */
+  @media (min-width: 700px) {
+    nav { padding: 16px 40px; }
+
+    .hero { padding: 110px 40px 80px; }
+
+    .hero-content {
+      flex-direction: row;
+      align-items: center;
+      gap: 48px;
+      max-width: 1000px;
+      text-align: left;
+    }
+
+    .hero-left { flex: 1; }
+    
+    .hero-right {
+      flex: 1;
+      max-width: none;
+    }
+    
+    .hero-subtitle {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .hero-tags { justify-content: flex-start; }
+    .btn-primary { width: auto; max-width: none; }
+
+    h1.hero-title { font-size: clamp(56px, 7vw, 88px); }
+    .hero-eyebrow { margin-bottom: 24px; }
+
+    .sec { max-width: 1100px; padding: 80px 40px; }
+    .sec-full .sec-inner { max-width: 1100px; padding: 0 40px; }
+
+    .pain-box { padding: 40px 40px; }
+    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .method-steps { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .results-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    .cta-content { max-width: 700px; }
+    .cta-section { padding: 110px 40px; }
+
+    footer { padding: 40px 40px 32px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+    .footer-contact { margin-top: 0; align-items: flex-end; }
+    .footer-copy { flex-basis: 100%; }
+
+    .divider { margin: 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/8106923/6a19a5087c9ec8.60919122_ChatGPTImage29_05_202611_24_34.png" alt="Elias Candido" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      Elias Candido
+      <span>Personal Trainer</span>
+    </div>
+  </a>
+  <a href="https://wa.me/5562999627157?text=Ola%20Elias!%20Quero%20agendar%20uma%20avaliacao." class="nav-cta" target="_blank">
+    Agendar
+  </a>
+</nav>
+
+<div class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Método MTOR · Goiânia – GO</div>
+
+      <h1 class="hero-title">
+        Você não<br>precisa<br>
+        <em>conviver<br>com a dor</em>
+      </h1>
+
+      <p class="hero-subtitle">
+        Recupere sua força, mobilidade e confiança com um método seguro e individualizado.
+      </p>
+
+      <div class="hero-tags">
+        <div class="hero-tag"><div class="dot"></div>Dor na Coluna</div>
+        <div class="hero-tag"><div class="dot"></div>Dor no Joelho</div>
+        <div class="hero-tag"><div class="dot"></div>Dor no Ombro</div>
+        <div class="hero-tag"><div class="dot"></div>Dor no Quadril</div>
+      </div>
+
+      <a href="https://wa.me/5562999627157?text=Ola%20Elias!%20Quero%20agendar%20uma%20avaliacao." class="btn-primary" target="_blank">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Quero minha avaliação
+      </a>
+    </div>
+
+    <div class="hero-right">
+      <img src="1.jpeg" alt="Tratamento de Lesão com Musculação" class="hero-image">
+    </div>
+  </div>
+</div>
+
+<div class="sec fade-up">
+  <div class="section-label">Você se identifica?</div>
+  <h2 class="section-title">A dor está<br>limitando sua vida?</h2>
+
+  <div class="pain-box">
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-head">Tem <strong>medo de treinar</strong> e piorar a dor</div>
+        <p class="pain-desc">A carga mecânica bem dosada estimula a remodelação dos tecidos e ativa mecanismos de analgesia do próprio corpo — o movimento certo reduz a dor, não aumenta.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-head">Já tentou <strong>treinar sozinho</strong> sem resultado</div>
+        <p class="pain-desc">Sem controle de volume, intensidade e progressão, o estímulo não atinge o limiar necessário para gerar adaptação. O resultado depende da dose certa de treino.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-head"><strong>Não sabe</strong> quais exercícios pode fazer</div>
+        <p class="pain-desc">Cada tecido tem uma tolerância de carga específica. A escolha correta dos exercícios respeita o estágio de recuperação e a capacidade atual de músculos e articulações.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-head">Dores que <strong>atrapalham sua rotina</strong></div>
+        <p class="pain-desc">A dor persistente altera o padrão de recrutamento muscular. Reorganizar esse padrão com exercício devolve função aos movimentos do dia a dia.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-head">Receio de <strong>agravar uma lesão antiga</strong></div>
+        <p class="pain-desc">O tecido lesionado se reorganiza sob estímulo gradual (mecanotransdução). A progressão respeita as fases de cicatrização para fortalecer sem recaída.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-head"><strong>Perdeu força e confiança</strong> para se movimentar</div>
+        <p class="pain-desc">O desuso reduz a massa muscular e o recrutamento de unidades motoras. O treino reverte esse processo, recuperando força e controle neuromuscular.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec-full story-bg">
+  <div class="sec-inner">
+    <div class="section-label">Minha história</div>
+    <h2 class="section-title">De paciente<br>a profissional</h2>
+    <p class="section-desc">Em 2019 sofri um grave acidente de moto que mudou completamente minha vida. Passei mais de dois anos em recuperação — essa jornada transformou minha visão do treinamento.</p>
+
+    <div class="story-highlight">
+      "Hoje utilizo minha experiência pessoal e formação acadêmica para ajudar pessoas a recuperarem movimento, força e qualidade de vida."
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div><div class="tl-year">2019</div><p class="tl-text">Grave acidente de moto — início de uma jornada de recuperação</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div><div class="tl-year">2019–2021</div><p class="tl-text">Dois anos em reabilitação, descobrindo o poder terapêutico do movimento</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div><div class="tl-year">Formação</div><p class="tl-text">Educador Físico, Pós-Graduado em Fisiologia do Exercício e Certificação MTOR</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div><div class="tl-year">Hoje</div><p class="tl-text">Ajudando pessoas a se libertarem da dor com o Método MTOR em Goiânia</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec fade-up">
+  <div class="section-label">Como funciona</div>
+  <h2 class="section-title">O método em<br>4 etapas</h2>
+  <p class="section-desc">Um processo estruturado, pensado para o seu corpo e sua realidade.</p>
+
+  <div class="method-steps">
+    <div class="method-step">
+      <div class="step-num">01</div>
+      <div class="step-accent"></div>
+      <div class="step-title">Avaliação Individual</div>
+      <p class="step-desc">Mapeamento das dores, da amplitude de movimento e dos padrões de recrutamento muscular para definir a carga inicial segura.</p>
+    </div>
+    <div class="method-step">
+      <div class="step-num">02</div>
+      <div class="step-accent"></div>
+      <div class="step-title">Correção Biomecânica</div>
+      <p class="step-desc">Reorganização dos padrões de movimento e do alinhamento articular, reduzindo a sobrecarga e distribuindo melhor as forças.</p>
+    </div>
+    <div class="method-step">
+      <div class="step-num">03</div>
+      <div class="step-accent"></div>
+      <div class="step-title">Fortalecimento</div>
+      <p class="step-desc">Estímulo progressivo de tensão mecânica que promove a síntese proteica e o ganho de força (adaptação neural e hipertrofia).</p>
+    </div>
+    <div class="method-step">
+      <div class="step-num">04</div>
+      <div class="step-accent"></div>
+      <div class="step-title">Progressão Segura</div>
+      <p class="step-desc">Aumento gradual de volume e intensidade dentro da sua capacidade de recuperação, respeitando as fases de adaptação do tecido.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec fade-up">
+  <div class="section-label">O que você conquista</div>
+  <h2 class="section-title">Resultados<br>reais</h2>
+
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Menos dor</div>
+      <p class="result-desc">O exercício libera mediadores que diminuem a sensibilidade à dor (analgesia induzida pelo exercício).</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Mais força</div>
+      <p class="result-desc">Adaptações neurais e aumento da área muscular elevam a capacidade de gerar tensão.</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Mais mobilidade</div>
+      <p class="result-desc">Ganho de amplitude articular com mais controle ao longo de toda a trajetória do movimento.</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Estabilidade</div>
+      <p class="result-desc">O reforço do core e da musculatura estabilizadora melhora o equilíbrio e protege as articulações.</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Mais disposição</div>
+      <p class="result-desc">A melhora da função mitocondrial e cardiovascular aumenta a produção e o uso de energia.</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Massa muscular</div>
+      <p class="result-desc">A tensão mecânica do treino ativa a síntese proteica, construindo tecido muscular (hipertrofia).</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Mais confiança</div>
+      <p class="result-desc">O domínio progressivo do movimento reduz o medo e aumenta a autoeficácia para se exercitar.</p>
+    </div>
+    <div class="result-card">
+      <div class="result-accent"></div>
+      <div class="result-text">Qualidade de vida</div>
+      <p class="result-desc">Mais autonomia nas tarefas diárias, melhor sono e bem-estar geral sustentados pelo treino regular.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec-full creds-bg">
+  <div class="sec-inner">
+    <div class="section-label">Por que me escolher</div>
+    <h2 class="section-title">Formação e<br>experiência</h2>
+
+    <div class="creds-list fade-up">
+      <div class="cred-item"><div class="cred-check">✓</div><span>Educador Físico</span></div>
+      <div class="cred-item"><div class="cred-check">✓</div><span>Personal Trainer</span></div>
+      <div class="cred-item"><div class="cred-check">✓</div><span>Pós-Graduado em Fisiologia do Exercício</span></div>
+      <div class="cred-item"><div class="cred-check">✓</div><span>Certificação MTOR</span></div>
+      <div class="cred-item"><div class="cred-check">✓</div><span>Especialista em Tratamento de Lesão com Musculação</span></div>
+      <div class="cred-item"><div class="cred-check">✓</div><span>Método Individualizado e Biomecânica Aplicada</span></div>
+      <div class="cred-item"><div class="cred-check">✓</div><span>Experiência com pessoas que convivem com dor crônica</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-content fade-up">
+    <div class="section-label" style="text-align:center">Dê o primeiro passo</div>
+    <h2>
+      Seu corpo foi feito<br>
+      <em>para se mover</em>
+    </h2>
+    <p>Com orientação adequada é possível recuperar sua força, sua confiança e sua qualidade de vida.</p>
+
+    <a href="https://wa.me/5562999627157?text=Ola%20Elias!%20Quero%20agendar%20uma%20avaliacao." class="btn-primary" target="_blank" style="margin: 0 auto;">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Quero minha avaliação gratuita
+    </a>
+    <p class="cta-note">📍 Goiânia – GO &nbsp;·&nbsp; 📲 (62) 99962-7157</p>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-brand">
+      Elias Candido
+      <span>Educador Físico · Personal Trainer · MTOR</span>
+    </div>
+    <div class="footer-contact">
+      <p>📍 Goiânia – GO</p>
+      <a href="tel:+5562999627157">📲 (62) 99962-7157</a>
+      <a href="https://wa.me/5562999627157" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Elias Candido · Todos os direitos reservados</p>
+</footer>
+
+<a href="https://wa.me/5562999627157?text=Ola%20Elias!%20Quero%20agendar%20uma%20avaliacao." class="wpp-float" target="_blank" title="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Timeline
+  const tlObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.tl-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.12}s`;
+    tlObs.observe(el);
+  });
+</script>
+</body>
+</html>
