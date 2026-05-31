@@ -681,7 +681,15 @@
 
   .footer-contact a {
     font-size: 13px;
-    color: var(--blue-light);
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* telefone em destaque (branco/negrito) mantendo o clique para ligar */
+  .phone-strong {
+    color: var(--white);
+    font-weight: 700;
     text-decoration: none;
   }
 
@@ -836,30 +844,12 @@
 
   <div class="pain-box">
     <div class="pain-grid">
-      <div class="pain-item">
-        <div class="pain-head">Tem <strong>medo de treinar</strong> e piorar a dor</div>
-        <p class="pain-desc">A carga mecânica bem dosada estimula a remodelação dos tecidos e ativa mecanismos de analgesia do próprio corpo — o movimento certo reduz a dor, não aumenta.</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-head">Já tentou <strong>treinar sozinho</strong> sem resultado</div>
-        <p class="pain-desc">Sem controle de volume, intensidade e progressão, o estímulo não atinge o limiar necessário para gerar adaptação. O resultado depende da dose certa de treino.</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-head"><strong>Não sabe</strong> quais exercícios pode fazer</div>
-        <p class="pain-desc">Cada tecido tem uma tolerância de carga específica. A escolha correta dos exercícios respeita o estágio de recuperação e a capacidade atual de músculos e articulações.</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-head">Dores que <strong>atrapalham sua rotina</strong></div>
-        <p class="pain-desc">A dor persistente altera o padrão de recrutamento muscular. Reorganizar esse padrão com exercício devolve função aos movimentos do dia a dia.</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-head">Receio de <strong>agravar uma lesão antiga</strong></div>
-        <p class="pain-desc">O tecido lesionado se reorganiza sob estímulo gradual (mecanotransdução). A progressão respeita as fases de cicatrização para fortalecer sem recaída.</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-head"><strong>Perdeu força e confiança</strong> para se movimentar</div>
-        <p class="pain-desc">O desuso reduz a massa muscular e o recrutamento de unidades motoras. O treino reverte esse processo, recuperando força e controle neuromuscular.</p>
-      </div>
+      <div class="pain-item"><div class="pain-icon">😰</div><p>Tem <strong>medo de treinar</strong> e piorar a dor</p></div>
+      <div class="pain-item"><div class="pain-icon">🔁</div><p>Já tentou <strong>treinar sozinho</strong> sem resultado</p></div>
+      <div class="pain-item"><div class="pain-icon">❓</div><p><strong>Não sabe</strong> quais exercícios pode fazer</p></div>
+      <div class="pain-item"><div class="pain-icon">🛑</div><p>Dores que <strong>atrapalham sua rotina</strong></p></div>
+      <div class="pain-item"><div class="pain-icon">⚠️</div><p>Receio de <strong>agravar uma lesão antiga</strong></p></div>
+      <div class="pain-item"><div class="pain-icon">📉</div><p><strong>Perdeu força e confiança</strong> para se movimentar</p></div>
     </div>
   </div>
 </div>
@@ -905,29 +895,30 @@
   <p class="section-desc">Um processo estruturado, pensado para o seu corpo e sua realidade.</p>
 
   <div class="method-steps">
+    <!-- Passo 1 atualizado com a imagem et1.jpg -->
     <div class="method-step">
       <div class="step-num">01</div>
-      <div class="step-accent"></div>
+      <img src="et1.jpg" alt="Avaliação Individual" class="step-img">
       <div class="step-title">Avaliação Individual</div>
-      <p class="step-desc">Mapeamento das dores, da amplitude de movimento e dos padrões de recrutamento muscular para definir a carga inicial segura.</p>
+      <p class="step-desc">Identificação das dores, limitações e objetivos.</p>
     </div>
     <div class="method-step">
       <div class="step-num">02</div>
-      <div class="step-accent"></div>
+      <span class="step-icon">⚙️</span>
       <div class="step-title">Correção Biomecânica</div>
-      <p class="step-desc">Reorganização dos padrões de movimento e do alinhamento articular, reduzindo a sobrecarga e distribuindo melhor as forças.</p>
+      <p class="step-desc">Ajustes para melhorar seus movimentos.</p>
     </div>
     <div class="method-step">
       <div class="step-num">03</div>
-      <div class="step-accent"></div>
+      <span class="step-icon">💪</span>
       <div class="step-title">Fortalecimento</div>
-      <p class="step-desc">Estímulo progressivo de tensão mecânica que promove a síntese proteica e o ganho de força (adaptação neural e hipertrofia).</p>
+      <p class="step-desc">Exercícios direcionados para sua necessidade.</p>
     </div>
     <div class="method-step">
       <div class="step-num">04</div>
-      <div class="step-accent"></div>
+      <span class="step-icon">📈</span>
       <div class="step-title">Progressão Segura</div>
-      <p class="step-desc">Aumento gradual de volume e intensidade dentro da sua capacidade de recuperação, respeitando as fases de adaptação do tecido.</p>
+      <p class="step-desc">Evolução respeitando seu corpo.</p>
     </div>
   </div>
 </div>
@@ -939,46 +930,14 @@
   <h2 class="section-title">Resultados<br>reais</h2>
 
   <div class="results-grid">
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Menos dor</div>
-      <p class="result-desc">O exercício libera mediadores que diminuem a sensibilidade à dor (analgesia induzida pelo exercício).</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Mais força</div>
-      <p class="result-desc">Adaptações neurais e aumento da área muscular elevam a capacidade de gerar tensão.</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Mais mobilidade</div>
-      <p class="result-desc">Ganho de amplitude articular com mais controle ao longo de toda a trajetória do movimento.</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Estabilidade</div>
-      <p class="result-desc">O reforço do core e da musculatura estabilizadora melhora o equilíbrio e protege as articulações.</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Mais disposição</div>
-      <p class="result-desc">A melhora da função mitocondrial e cardiovascular aumenta a produção e o uso de energia.</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Massa muscular</div>
-      <p class="result-desc">A tensão mecânica do treino ativa a síntese proteica, construindo tecido muscular (hipertrofia).</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Mais confiança</div>
-      <p class="result-desc">O domínio progressivo do movimento reduz o medo e aumenta a autoeficácia para se exercitar.</p>
-    </div>
-    <div class="result-card">
-      <div class="result-accent"></div>
-      <div class="result-text">Qualidade de vida</div>
-      <p class="result-desc">Mais autonomia nas tarefas diárias, melhor sono e bem-estar geral sustentados pelo treino regular.</p>
-    </div>
+    <div class="result-card"><span class="result-icon">✅</span><div class="result-text">Menos dor</div></div>
+    <div class="result-card"><span class="result-icon">💪</span><div class="result-text">Mais força</div></div>
+    <div class="result-card"><span class="result-icon">🏃</span><div class="result-text">Mais mobilidade</div></div>
+    <div class="result-card"><span class="result-icon">🏗️</span><div class="result-text">Estabilidade</div></div>
+    <div class="result-card"><span class="result-icon">⚡</span><div class="result-text">Mais disposição</div></div>
+    <div class="result-card"><span class="result-icon">🎯</span><div class="result-text">Massa muscular</div></div>
+    <div class="result-card"><span class="result-icon">🧠</span><div class="result-text">Mais confiança</div></div>
+    <div class="result-card"><span class="result-icon">🌟</span><div class="result-text">Qualidade de vida</div></div>
   </div>
 </div>
 
@@ -1014,7 +973,7 @@
       <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
       Quero minha avaliação gratuita
     </a>
-    <p class="cta-note">📍 Goiânia – GO &nbsp;·&nbsp; 📲 (62) 99962-7157</p>
+    <p class="cta-note">📍 Goiânia – GO &nbsp;·&nbsp; <a href="tel:+5562999627157" class="phone-strong">📲 (62) 99962-7157</a></p>
   </div>
 </div>
 
