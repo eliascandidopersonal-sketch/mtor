@@ -97,8 +97,7 @@
     display: flex; justify-content: center; align-items: center;
   }
 
-  /* ── FOTO HERO — screen blend elimina fundo escuro de estúdio ── */
-  /* ── FOTO HERO: PNG com alpha real, zero divisão visível ── */
+  /* ── FOTO HERO: alpha real, fundo transparente ── */
   .hero-photo {
     position: relative;
     width: 100%;
@@ -107,7 +106,6 @@
     overflow: visible;
   }
 
-  /* photo-tint removido — era o retângulo azul visível */
   .hero-photo .photo-tint { display: none; }
 
   .hero-photo img {
@@ -118,7 +116,6 @@
     object-position: center center;
     mix-blend-mode: normal;
     z-index: 2;
-    /* máscara muito gradual: sem linha de corte visível */
     -webkit-mask-image: radial-gradient(
       ellipse 94% 98% at 52% 46%,
       #000 35%,
@@ -136,10 +133,11 @@
       transparent 100%
     );
   }
+
   .hero-stats {
-    position: absolute; bottom: 22px; right: 22px;
+    position: absolute; bottom: 28%; right: 22px;
     z-index: 5; display: flex; flex-direction: column;
-    gap: 18px; text-align: right;
+    gap: 22px; text-align: right;
   }
   .stat-num {
     font-family: 'Bebas Neue', sans-serif; font-size: 46px;
